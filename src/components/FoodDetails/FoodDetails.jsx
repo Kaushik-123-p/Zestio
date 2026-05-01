@@ -1,19 +1,31 @@
 import { useParams, useNavigate } from "react-router-dom"
 import FoodData from "../../Data/FoodData"
 import { FaStar, FaArrowLeft, FaPlus, FaMinus } from "react-icons/fa"
-import { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { addToCart } from "../../redux/slices/cartSlice/CartSlice"
 
 
 const FoodDetails = () => {
+
+    const cartItems = useSelector((state) => state.cart.cart)
+
     const dispatch = useDispatch()
 
     const { id } = useParams()
     const navigate = useNavigate()
-    const [qty, setQty] = useState(1)
 
     const food = FoodData.find((item) => item.id === Number(id))
+
+    const existingItem = cartItems.find(item => item.id === food.id)
+
+    const [qty, setQty] = useState(existingItem ? existingItem.qty : 1)
+
+    useEffect(() => {
+        if (existingItem) {
+            setQty(existingItem.qty)
+        }
+    }, [existingItem])
 
     if (!food) {
         return (

@@ -21,7 +21,7 @@ const Category = () => {
         listUniqueCategories()
     }, [])
     return (
-        <div className="bg-slate-100 py-8 mt-42 md:mt-0">
+        <div className="bg-slate-100 py-8 pt-20   md:pt-0">
 
             <div className="max-w-6xl mx-auto flex flex-col items-center">
 

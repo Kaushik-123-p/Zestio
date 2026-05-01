@@ -1,6 +1,5 @@
 
 import logo from "../../assets/logo.png"
-import Category from "../../components/Category/Category"
 import { Link } from "react-router-dom"
 
 const Home = () => {
@@ -8,12 +7,12 @@ const Home = () => {
         <div className="bg-slate-100 min-h-screen mt-20">
 
 
-            <Category />
+            {/* <Category /> */}
 
-            <div className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-10 flex flex-col md:flex-row items-center gap-10">
+            <div className="max-w-6xl mx-auto px-4 md:px-6 py-6 md:py-10 flex flex-col md:flex-row items-center justify-center min-h-screen gap-10">
 
 
-                <div className="flex-1 text-center md:text-left">
+                <div className="flex-1 text-center md:text-left ">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-orange-400 mb-4 leading-tight">
                         Delicious Food <br /> Delivered Fast
                     </h1>
