@@ -1,19 +1,21 @@
 import { FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/slices/cartSlice/CartSlice";
+import { useNavigate } from "react-router-dom";
 
 
 
 const FoodCard = ({ item, toastNotification }) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
 
     return (
-        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+        <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300 " >
 
             {/* Image */}
-            <div className="w-full h-44 sm:h-48 overflow-hidden rounded-t-xl">
+            <div className="w-full h-44 sm:h-48 overflow-hidden rounded-t-xl" onClick={() => navigate(`/food/${item.id}`)}>
                 <img
                     src={item.img}
                     alt={item.name}

@@ -70,17 +70,6 @@ const FoodGrid = () => {
                         </div>
                     )
                     }
-                    {/* {FoodData.length > 0 ? (
-                        FoodData.map((item) => (
-                            <FoodCard key={item.id} item={item} toastNotification={toastNotification} />
-                        ))
-                    ) : (
-                        <div className="col-span-full flex flex-col items-center text-gray-500">
-                            <FaRegSadTear className="text-3xl mb-2" />
-                            <p>No food items found</p>
-                        </div>
-                    )} */}
-
                 </div>
 
             </div></>

@@ -11,6 +11,7 @@ import { useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import ProtectedRoutes from './components/Protected_Routes/ProtectedRoutes'
+import FoodDetails from './components/FoodDetails/FoodDetails'
 
 
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/success" element={<ProtectedRoutes element={<Success />} />} />
           <Route path="/foodgrid" element={<FoodGrid />} />
+          <Route path="/food/:id" element={<FoodDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<Error />} />
